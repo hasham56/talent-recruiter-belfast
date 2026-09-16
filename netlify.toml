@@ -1,0 +1,8 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/recruiter"
+  to = "/recruiter.html"
+  status = 200

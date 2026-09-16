@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talent Placement & Support | Recruitment in Belfast</title>
+<meta name="description" content="Talent Placement & Support recruits and supplies staff for hospitality, healthcare, industrial and retail in Belfast and across the UK.">
+<style>
+  :root { --red: #c8261b; --ink: #1d1d1f; --muted: #5f6368; --bg: #faf8f6; --card: #fff; --line: #e7e2dd; --wa: #1fa855; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; }
+  header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 12px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; }
+  .logo { width: 40px; height: 40px; background: var(--red); color: #fff; display: grid; place-items: center; font: italic 700 17px Georgia, serif; outline: 1px solid var(--red); outline-offset: 2px; }
+  nav a { text-decoration: none; margin-left: 18px; color: var(--muted); font-size: 15px; }
+  nav a:hover { color: var(--red); }
+  @media (max-width: 640px) { nav { display: none; } }
+
+  .hero { padding-block: 72px 56px; }
+  .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; margin: 0 0 16px; max-width: 18ch; }
+  .hero h1 span { color: var(--red); }
+  .hero p { font-size: 18px; color: var(--muted); max-width: 56ch; margin: 0 0 28px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 8px; font-weight: 600; text-decoration: none; border: 0; cursor: pointer; font-size: 15px; }
+  .btn-red { background: var(--red); color: #fff; }
+  .btn-wa { background: var(--wa); color: #fff; }
+  .btn-ghost { background: #fff; border: 1px solid var(--line); }
+  .btn:hover { filter: brightness(.95); }
+  .btn svg { width: 18px; height: 18px; fill: currentColor; }
+
+  section { padding-block: 56px; }
+  h2 { font-size: 30px; margin: 0 0 8px; }
+  .sub { color: var(--muted); margin: 0 0 32px; }
+
+  .sectors { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .sector { background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--red); border-radius: 10px; padding: 20px; }
+  .sector h3 { margin: 0 0 8px; font-size: 18px; }
+  .sector ul { margin: 0; padding-left: 18px; color: var(--muted); }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .chip { padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: #fff; cursor: pointer; font-size: 14px; }
+  .chip[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .jobs { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 16px; }
+  .job { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+  .job h3 { margin: 0; font-size: 18px; }
+  .meta { font-size: 13px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag { background: #fbeceb; color: var(--red); padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+  .job p { margin: 0; color: var(--muted); font-size: 15px; flex: 1; }
+  .job .btn { align-self: flex-start; margin-top: 8px; }
+  .empty { color: var(--muted); }
+
+  .contact { background: #fff; border-block: 1px solid var(--line); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } }
+  .details p { margin: 0 0 10px; }
+  .details strong { display: inline-block; width: 80px; vertical-align: top; color: var(--muted); font-weight: 500; }
+  form { display: grid; gap: 12px; }
+  label { font-size: 14px; font-weight: 600; }
+  input, textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font: inherit; background: var(--bg); }
+  textarea { min-height: 120px; resize: vertical; }
+  .map { display: block; width: 100%; height: 340px; border: 1px solid var(--line); border-radius: 10px; margin-top: 40px; }
+  footer { padding-block: 24px; color: var(--muted); font-size: 14px; text-align: center; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="logo">TPS</span> Talent Placement &amp; Support</a>
+    <nav><a href="#sectors">Sectors</a><a href="#jobs">Jobs</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <h1>The right people for <span>the right roles.</span></h1>
+    <p>We recruit and supply staff for hospitality, healthcare, industrial and retail. We're based in Belfast. Looking for work? Browse our current jobs and message us straight away.</p>
+    <div class="btns">
+      <a class="btn btn-red" href="#jobs">View jobs</a>
+      <a class="btn btn-wa" id="wa-general" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>Chat on WhatsApp</a>
+    </div>
+  </div>
+
+  <section id="sectors">
+    <div class="wrap">
+      <h2>Sectors we staff</h2>
+      <p class="sub">Temporary and permanent staff, placed quickly.</p>
+      <div class="sectors">
+        <div class="sector"><h3>Hospitality</h3><ul><li>Chefs of all levels</li><li>Bar &amp; front of house staff</li><li>Housekeepers</li></ul></div>
+        <div class="sector"><h3>Healthcare</h3><ul><li>Care assistants</li><li>Catering assistants</li><li>Cooks &amp; bakers</li><li>Housekeepers &amp; cleaners</li></ul></div>
+        <div class="sector"><h3>Industrial &amp; Retail</h3><ul><li>Warehouse operatives</li><li>Retail assistants</li><li>Cleaners</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="jobs">
+    <div class="wrap">
+      <h2>Current openings</h2>
+      <p class="sub">Found a role that suits you? Tap "Apply" to message us on WhatsApp.</p>
+      <div class="filters" id="filters"></div>
+      <div class="jobs" id="job-list"><p class="empty">Loading jobs…</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap contact-grid">
+      <div class="details">
+        <h2>Get in touch</h2>
+        <p class="sub">Hiring staff or looking for work? Contact us.</p>
+        <p><strong>Contact</strong> Mr Jarred Morinte</p>
+        <p><strong>Role</strong> Executive Business Manager &amp; Contracts</p>
+        <p><strong>Phone</strong> <a href="tel:+447588435731">+44 7588 435731</a></p>
+        <p><strong>Email</strong> <a href="mailto:enquiries@talentplacementsupport.com">enquiries@talentplacementsupport.com</a></p>
+        <p><strong>Address</strong> The Mount Business Centre, 2 Woodstock Link, Belfast BT6 8DD, United Kingdom · <a href="https://www.google.com/maps/search/?api=1&amp;query=The+Mount+Business+Centre+2+Woodstock+Link+Belfast+BT6+8DD" target="_blank" rel="noopener">Directions</a></p>
+        <div class="btns" style="margin-top:20px">
+          <a class="btn btn-wa" id="wa-contact" target="_blank" rel="noopener">WhatsApp us</a>
+        </div>
+      </div>
+      <form id="email-form">
+        <div><label for="name">Your name</label><input id="name" required></div>
+        <div><label for="phone">Phone (optional)</label><input id="phone" type="tel"></div>
+        <div><label for="msg">Message</label><textarea id="msg" required></textarea></div>
+        <button class="btn btn-red" type="submit">Send by email</button>
+      </form>
+    </div>
+    <div class="wrap">
+      <iframe class="map" title="Map to The Mount Business Centre, Belfast" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=The+Mount+Business+Centre,+2+Woodstock+Link,+Belfast+BT6+8DD&amp;z=16&amp;output=embed"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> Talent Placement &amp; Support · Belfast, UK</footer>
+
+<script>
+  const WA_NUMBER = '447588435731';
+  const EMAIL = 'enquiries@talentplacementsupport.com';
+  const wa = (text) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+
+  const general = wa("Hi, I found you on the Talent Placement & Support website and I'd like to find out more.");
+  document.getElementById('wa-general').href = general;
+  document.getElementById('wa-contact').href = general;
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  document.getElementById('email-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const msg = document.getElementById('msg').value.trim();
+    const body = `${msg}\n\nName: ${name}${phone ? `\nPhone: ${phone}` : ''}\n\n(Sent from the website)`;
+    location.href = `mailto:${EMAIL}?subject=${encodeURIComponent('Website enquiry from ' + name)}&body=${encodeURIComponent(body)}`;
+  });
+
+  const list = document.getElementById('job-list');
+  const filters = document.getElementById('filters');
+  let jobs = [], active = 'All';
+
+  function render() {
+    list.replaceChildren();
+    const shown = active === 'All' ? jobs : jobs.filter((j) => j.sector === active);
+    if (!shown.length) { list.innerHTML = '<p class="empty">No openings right now. Please check back soon, or send us a message.</p>'; return; }
+    for (const j of shown) {
+      const card = document.createElement('article');
+      card.className = 'job';
+      card.innerHTML = '<h3></h3><div class="meta"></div><p></p><a class="btn btn-wa" target="_blank" rel="noopener">Apply</a>';
+      card.querySelector('h3').textContent = j.title;
+      const meta = card.querySelector('.meta');
+      if (j.sector) { const t = document.createElement('span'); t.className = 'tag'; t.textContent = j.sector; meta.append(t); }
+      if (j.location) { const l = document.createElement('span'); l.textContent = '📍 ' + j.location; meta.append(l); }
+      card.querySelector('p').textContent = j.description;
+      card.querySelector('a').href = wa(`Hi, I found you on the Talent Placement & Support website and I'd like to apply for the ${j.title} role${j.location ? ` (${j.location})` : ''}.`);
+      list.append(card);
+    }
+  }
+
+  function renderFilters() {
+    const sectors = ['All', ...new Set(jobs.map((j) => j.sector).filter(Boolean))];
+    filters.replaceChildren(...sectors.map((s) => {
+      const b = document.createElement('button');
+      b.className = 'chip'; b.textContent = s; b.setAttribute('aria-pressed', s === active);
+      b.onclick = () => { active = s; renderFilters(); render(); };
+      return b;
+    }));
+  }
+
+  fetch('/api/jobs').then((r) => r.json()).then((data) => { jobs = data; renderFilters(); render(); })
+    .catch(() => { list.innerHTML = '<p class="empty">Couldn\'t load jobs. Please try again later.</p>'; });
+</script>
+</body>
+</html>

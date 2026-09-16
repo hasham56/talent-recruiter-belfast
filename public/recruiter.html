@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Recruiter · Manage Jobs</title>
+<style>
+  :root { --red: #c8261b; --ink: #1d1d1f; --muted: #5f6368; --bg: #faf8f6; --line: #e7e2dd; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); }
+  .wrap { max-width: 760px; margin: 0 auto; padding-inline: 20px; padding-block: 40px; }
+  h1 { margin: 0 0 4px; } h2 { margin: 0 0 12px; font-size: 18px; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px; margin-bottom: 24px; }
+  form { display: grid; gap: 12px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+  label { font-size: 14px; font-weight: 600; display: block; margin-bottom: 4px; }
+  input, textarea { width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; font: inherit; background: var(--bg); }
+  button { padding: 10px 18px; border-radius: 8px; border: 0; font: 600 15px system-ui, sans-serif; cursor: pointer; background: var(--red); color: #fff; }
+  button.alt { background: #fff; color: var(--red); border: 1px solid var(--red); padding: 6px 12px; font-size: 14px; }
+  button.plain { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .job { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 12px; border-top: 1px solid var(--line); }
+  .job:first-child { border-top: 0; }
+  .job small { color: var(--muted); display: block; }
+  .msg { color: var(--red); min-height: 1.5em; margin: 0; }
+  .msg.ok { color: #1a7f37; }
+  .top { display: flex; justify-content: space-between; align-items: start; gap: 12px; flex-wrap: wrap; }
+  a { color: var(--red); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <h1>Manage jobs</h1>
+      <p class="sub">Changes show on the <a href="/">website</a> straight away.</p>
+    </div>
+    <div class="actions" id="top-actions" hidden>
+      <button class="plain" id="pw-toggle">Change password</button>
+      <button class="plain" id="logout">Log out</button>
+    </div>
+  </div>
+
+  <div class="card" id="login">
+    <form id="login-form">
+      <div><label for="pw">Password</label><input id="pw" type="password" required autocomplete="current-password"></div>
+      <div class="actions"><button>Log in</button></div>
+      <p class="msg" id="login-msg"></p>
+    </form>
+  </div>
+
+  <div id="panel" hidden>
+    <div class="card" id="pw-card" hidden>
+      <h2>Change password</h2>
+      <form id="pw-form">
+        <div class="row">
+          <div><label for="new-pw">New password</label><input id="new-pw" type="password" minlength="8" required autocomplete="new-password"></div>
+          <div><label for="new-pw2">Confirm new password</label><input id="new-pw2" type="password" minlength="8" required autocomplete="new-password"></div>
+        </div>
+        <div class="actions"><button>Save password</button></div>
+        <p class="msg" id="pw-msg"></p>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2 id="form-title">Add a job</h2>
+      <form id="job-form">
+        <div><label for="title">Job title *</label><input id="title" required maxlength="100" placeholder="e.g. Care Assistant"></div>
+        <div class="row">
+          <div><label for="sector">Sector</label><input id="sector" list="sectors" maxlength="60" placeholder="e.g. Healthcare"></div>
+          <div><label for="location">Location</label><input id="location" maxlength="80" placeholder="e.g. Belfast"></div>
+        </div>
+        <datalist id="sectors"><option>Hospitality</option><option>Healthcare</option><option>Industrial &amp; Retail</option></datalist>
+        <div><label for="description">Description</label><textarea id="description" maxlength="1000" rows="3"></textarea></div>
+        <div class="actions">
+          <button id="save-btn">Add job</button>
+          <button type="button" class="plain" id="cancel-edit" hidden>Cancel</button>
+        </div>
+        <p class="msg" id="job-msg"></p>
+      </form>
+    </div>
+    <div class="card" id="list"></div>
+  </div>
+</div>
+
+<script>
+  const FIELDS = ['title', 'sector', 'location', 'description'];
+  const $ = (id) => document.getElementById(id);
+  let pw = sessionStorage.getItem('pw') || '';
+  let editingId = null;
+
+  const api = (method, url, body) => fetch(url, {
+    method, headers: { 'Content-Type': 'application/json', 'X-Admin-Password': pw },
+    body: body && JSON.stringify(body),
+  });
+
+  function setEditing(job) {
+    editingId = job ? job.id : null;
+    FIELDS.forEach((k) => { $(k).value = job ? job[k] || '' : ''; });
+    $('form-title').textContent = job ? 'Edit job' : 'Add a job';
+    $('save-btn').textContent = job ? 'Save changes' : 'Add job';
+    $('cancel-edit').hidden = !job;
+    $('job-msg').textContent = '';
+    if (job) { $('job-form').scrollIntoView({ behavior: 'smooth' }); $('title').focus(); }
+  }
+
+  async function load() {
+    const jobs = await (await fetch('/api/jobs')).json();
+    const list = $('list');
+    list.replaceChildren();
+    if (!jobs.length) { list.textContent = 'No jobs listed yet.'; return; }
+    for (const j of jobs) {
+      const row = document.createElement('div');
+      row.className = 'job';
+      row.innerHTML = '<div><strong></strong><small></small></div><div class="actions"><button class="alt">Edit</button><button class="alt">Remove</button></div>';
+      row.querySelector('strong').textContent = j.title;
+      row.querySelector('small').textContent = [j.sector, j.location].filter(Boolean).join(' · ');
+      const [edit, del] = row.querySelectorAll('button');
+      edit.onclick = () => setEditing(j);
+      del.onclick = async () => {
+        if (!confirm(`Remove "${j.title}"?`)) return;
+        const r = await api('DELETE', '/api/jobs/' + encodeURIComponent(j.id));
+        if (r.status === 401) return logout();
+        if (editingId === j.id) setEditing(null);
+        load();
+      };
+      list.append(row);
+    }
+  }
+
+  function logout() {
+    sessionStorage.removeItem('pw'); pw = '';
+    $('panel').hidden = true; $('top-actions').hidden = true; $('login').hidden = false;
+  }
+
+  async function tryLogin() {
+    const r = await api('POST', '/api/login');
+    if (!r.ok) { $('login-msg').textContent = r.status === 401 ? 'Wrong password' : 'Something went wrong, try again'; return logout(); }
+    $('login-msg').textContent = '';
+    sessionStorage.setItem('pw', pw);
+    $('login').hidden = true; $('panel').hidden = false; $('top-actions').hidden = false;
+    load();
+  }
+
+  $('login-form').onsubmit = (e) => { e.preventDefault(); pw = $('pw').value; tryLogin(); };
+  $('logout').onclick = logout;
+  $('cancel-edit').onclick = () => setEditing(null);
+  $('pw-toggle').onclick = () => { $('pw-card').hidden = !$('pw-card').hidden; };
+
+  $('job-form').onsubmit = async (e) => {
+    e.preventDefault();
+    const job = Object.fromEntries(FIELDS.map((k) => [k, $(k).value]));
+    const r = editingId
+      ? await api('PUT', '/api/jobs/' + encodeURIComponent(editingId), job)
+      : await api('POST', '/api/jobs', job);
+    if (r.status === 401) return logout();
+    if (!r.ok) { $('job-msg').textContent = (await r.json()).error; return; }
+    setEditing(null);
+    load();
+  };
+
+  $('pw-form').onsubmit = async (e) => {
+    e.preventDefault();
+    const msg = $('pw-msg');
+    msg.className = 'msg';
+    if ($('new-pw').value !== $('new-pw2').value) { msg.textContent = 'Passwords do not match'; return; }
+    const r = await api('POST', '/api/password', { password: $('new-pw').value });
+    if (r.status === 401) return logout();
+    if (!r.ok) { msg.textContent = (await r.json()).error; return; }
+    pw = $('new-pw').value;
+    sessionStorage.setItem('pw', pw);
+    e.target.reset();
+    msg.className = 'msg ok';
+    msg.textContent = 'Password changed';
+  };
+
+  if (pw) tryLogin();
+</script>
+</body>
+</html>

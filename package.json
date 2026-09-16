@@ -1,0 +1,11 @@
+{
+  "name": "talent-placement-support",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.0"
+  }
+}
