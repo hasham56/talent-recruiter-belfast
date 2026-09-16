@@ -49,8 +49,8 @@
   </div>
 
   <div class="card" id="login">
-    <form id="login-form">
-      <div><label for="pw">Password</label><input id="pw" type="password" required autocomplete="current-password"></div>
+    <form id="login-form" autocomplete="off">
+      <div><label for="pw">Password</label><input id="pw" type="password" required autocomplete="off"></div>
       <div class="actions"><button>Log in</button></div>
       <p class="msg" id="login-msg"></p>
     </form>
@@ -93,7 +93,8 @@
 <script>
   const FIELDS = ['title', 'sector', 'location', 'description'];
   const $ = (id) => document.getElementById(id);
-  let pw = sessionStorage.getItem('pw') || '';
+  // Password lives only in memory: refresh or logout = logged out.
+  let pw = '';
   let editingId = null;
   let pwTimer;
 
@@ -137,7 +138,8 @@
   }
 
   function logout() {
-    sessionStorage.removeItem('pw'); pw = '';
+    pw = '';
+    $('pw').value = '';
     closePwCard();
     $('panel').hidden = true; $('top-actions').hidden = true; $('subtitle').hidden = true; $('login').hidden = false;
     $('heading').textContent = "Recruiter's Login";
@@ -147,7 +149,7 @@
     const r = await api('POST', '/api/login');
     if (!r.ok) { $('login-msg').textContent = r.status === 401 ? 'Wrong password' : 'Something went wrong, try again'; return logout(); }
     $('login-msg').textContent = '';
-    sessionStorage.setItem('pw', pw);
+    $('pw').value = '';
     $('login').hidden = true; $('panel').hidden = false; $('top-actions').hidden = false; $('subtitle').hidden = false;
     $('heading').textContent = 'Manage jobs';
     load();
@@ -185,7 +187,6 @@
     if (r.status === 401) return logout();
     if (!r.ok) { msg.textContent = (await r.json()).error; return; }
     pw = $('new-pw').value;
-    sessionStorage.setItem('pw', pw);
     e.target.reset();
     msg.className = 'msg ok';
     msg.textContent = 'Password changed';
@@ -197,7 +198,7 @@
     pwTimer = setTimeout(closePwCard, 5000);
   };
 
-  if (pw) tryLogin();
+  $('pw').value = ''; // stop browsers restoring the field on refresh
 </script>
 </body>
 </html>
