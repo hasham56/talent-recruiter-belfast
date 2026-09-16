@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Recruiter · Manage Jobs</title>
+<title>Recruiter's Login</title>
 <style>
   :root { --red: #c8261b; --ink: #1d1d1f; --muted: #5f6368; --bg: #faf8f6; --line: #e7e2dd; }
   * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
   body { margin: 0; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); }
   .wrap { max-width: 760px; margin: 0 auto; padding-inline: 20px; padding-block: 40px; }
   h1 { margin: 0 0 4px; } h2 { margin: 0 0 12px; font-size: 18px; }
@@ -35,8 +36,8 @@
 <div class="wrap">
   <div class="top">
     <div>
-      <h1>Manage jobs</h1>
-      <p class="sub">Changes show on the <a href="/">website</a> straight away.</p>
+      <h1 id="heading">Recruiter's Login</h1>
+      <p class="sub" id="subtitle" hidden>Changes show on the <a href="/">website</a> straight away.</p>
     </div>
     <div class="actions" id="top-actions" hidden>
       <button class="plain" id="pw-toggle">Change password</button>
@@ -133,7 +134,8 @@
 
   function logout() {
     sessionStorage.removeItem('pw'); pw = '';
-    $('panel').hidden = true; $('top-actions').hidden = true; $('login').hidden = false;
+    $('panel').hidden = true; $('top-actions').hidden = true; $('subtitle').hidden = true; $('login').hidden = false;
+    $('heading').textContent = "Recruiter's Login";
   }
 
   async function tryLogin() {
@@ -141,7 +143,8 @@
     if (!r.ok) { $('login-msg').textContent = r.status === 401 ? 'Wrong password' : 'Something went wrong, try again'; return logout(); }
     $('login-msg').textContent = '';
     sessionStorage.setItem('pw', pw);
-    $('login').hidden = true; $('panel').hidden = false; $('top-actions').hidden = false;
+    $('login').hidden = true; $('panel').hidden = false; $('top-actions').hidden = false; $('subtitle').hidden = false;
+    $('heading').textContent = 'Manage jobs';
     load();
   }
 
