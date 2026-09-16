@@ -189,6 +189,8 @@
     e.target.reset();
     msg.className = 'msg ok';
     msg.textContent = 'Password changed';
+    clearTimeout(pwTimer);
+    $('pw-card').querySelector('.timer')?.remove();
     const bar = document.createElement('div');
     bar.className = 'timer';
     $('pw-card').append(bar);
