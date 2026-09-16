@@ -30,6 +30,9 @@
   .msg.ok { color: #1a7f37; }
   .top { display: flex; justify-content: space-between; align-items: start; gap: 12px; flex-wrap: wrap; }
   a { color: var(--red); }
+  #pw-card { overflow: hidden; }
+  .timer { height: 4px; margin: 16px -20px -20px; background: #1a7f37; transform-origin: left; animation: shrink 5s linear forwards; }
+  @keyframes shrink { to { transform: scaleX(0); } }
 </style>
 </head>
 <body>
@@ -92,6 +95,7 @@
   const $ = (id) => document.getElementById(id);
   let pw = sessionStorage.getItem('pw') || '';
   let editingId = null;
+  let pwTimer;
 
   const api = (method, url, body) => fetch(url, {
     method, headers: { 'Content-Type': 'application/json', 'X-Admin-Password': pw },
@@ -134,6 +138,7 @@
 
   function logout() {
     sessionStorage.removeItem('pw'); pw = '';
+    closePwCard();
     $('panel').hidden = true; $('top-actions').hidden = true; $('subtitle').hidden = true; $('login').hidden = false;
     $('heading').textContent = "Recruiter's Login";
   }
@@ -151,7 +156,13 @@
   $('login-form').onsubmit = (e) => { e.preventDefault(); pw = $('pw').value; tryLogin(); };
   $('logout').onclick = logout;
   $('cancel-edit').onclick = () => setEditing(null);
-  $('pw-toggle').onclick = () => { $('pw-card').hidden = !$('pw-card').hidden; };
+  function closePwCard() {
+    clearTimeout(pwTimer);
+    $('pw-card').querySelector('.timer')?.remove();
+    $('pw-msg').textContent = '';
+    $('pw-card').hidden = true;
+  }
+  $('pw-toggle').onclick = () => { if ($('pw-card').hidden) $('pw-card').hidden = false; else closePwCard(); };
 
   $('job-form').onsubmit = async (e) => {
     e.preventDefault();
@@ -178,6 +189,10 @@
     e.target.reset();
     msg.className = 'msg ok';
     msg.textContent = 'Password changed';
+    const bar = document.createElement('div');
+    bar.className = 'timer';
+    $('pw-card').append(bar);
+    pwTimer = setTimeout(closePwCard, 5000);
   };
 
   if (pw) tryLogin();
