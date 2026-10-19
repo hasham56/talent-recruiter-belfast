@@ -33,8 +33,11 @@
   .draft-note strong { display: block; margin-bottom: 4px; }
   .ph { background: #fdf0ae; border-bottom: 1px dotted #a07d12; padding: 0 4px; border-radius: 3px; font-style: italic; }
   table { border-collapse: collapse; width: 100%; margin-bottom: 24px; background: #fff; }
-  th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; }
-  th { width: 40%; font-weight: 600; color: var(--muted); }
+  th, td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; vertical-align: top; }
+  thead th { background: #f4efe9; color: var(--ink); font-weight: 600; }
+  .sign th { width: 40%; font-weight: 600; color: var(--muted); }
+  .table-scroll { overflow-x: auto; margin-bottom: 24px; }
+  .table-scroll table { margin-bottom: 0; min-width: 520px; }
   .sign { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   @media (max-width: 680px) { .sign { grid-template-columns: 1fr; } }
   footer { border-top: 1px solid var(--line); padding-block: 24px; color: var(--muted); font-size: 14px; text-align: center; }
@@ -60,10 +63,10 @@
   </div>
 
   <div class="party">
-    <p><strong><span class="ph">[Registered company name — to confirm]</span></strong>, trading as Talent Placement &amp; Support ("TPS"), a company registered in Northern Ireland under number <span class="ph">[to confirm]</span>. VAT number <span class="ph">[to confirm]</span>.</p>
+    <p><strong>Talent Placement &amp; Support</strong> ("TPS"), a company registered in Northern Ireland under number <span class="ph">[company number — to confirm]</span>. VAT number <span class="ph">[VAT number, or "not VAT registered" — to confirm]</span>.</p>
     <p>Registered office and trading address: The Mount Business Centre, 2 Woodstock Link, Belfast BT6 8DD, United Kingdom.</p>
     <p>Email: <a href="mailto:enquiries@talentplacementsupport.com">enquiries@talentplacementsupport.com</a> · Web: www.talentplacementsupport.com</p>
-    <p>Version <span class="ph">[to confirm]</span>, effective from <span class="ph">[to confirm]</span>.</p>
+    <p>Version 1, effective from <span class="ph">[date — to confirm]</span>.</p>
   </div>
 
   <h2>Part A — General</h2>
@@ -114,44 +117,68 @@
     <li>any qualifications, licences, checks or experience required by law or by a professional body</li>
   </ul>
   <p>4.2 Tell TPS in writing, before arranging an interview, if the role details change.</p>
-  <p>4.3 Tell TPS in writing within <span class="ph">[number — to confirm]</span> Working Days of receiving a person's details if the Client already has that person's details from another source. If the Client does not, the Introduction is treated as made by TPS.</p>
+  <p>4.3 Tell TPS in writing within 3 Working Days of receiving a person's details if the Client already has that person's details from another source. If the Client does not, the Introduction is treated as made by TPS.</p>
   <p>4.4 Give TPS feedback on CVs and interviews within a reasonable time, so Candidates are kept informed.</p>
-  <p>4.5 Pay at least the National Minimum Wage or National Living Wage for the role, and comply with employment, health and safety and equality law.</p>
+  <p>4.5 Pay at least the National Minimum Wage  or National Living Wage for the role, and comply with employment, health and safety and equality law.</p>
   <p>4.6 Not discriminate against any person TPS introduces or supplies on any ground prohibited by law.</p>
 
   <h2>Part B — Permanent recruitment</h2>
 
   <h3>5. Introduction Fee</h3>
   <p>5.1 If the Client Engages a Candidate, the Client must pay TPS an Introduction Fee. The fee is due whether the role is the one first discussed or a different one.</p>
-  <p>5.2 The Introduction Fee is <span class="ph">[fee — to confirm]</span> plus VAT.</p>
-  <p>5.3 Remuneration includes <span class="ph">[what counts towards the fee — to confirm]</span>.</p>
-  <p>5.4 For hourly-paid roles, the annual figure is worked out as the hourly rate × <span class="ph">[hours per week — to confirm]</span> hours × 52 weeks.</p>
-  <p>5.5 A minimum fee of <span class="ph">[minimum fee — to confirm]</span> plus VAT applies.</p>
+  <p>5.2 The Introduction Fee depends on the package agreed before TPS starts work on the vacancy. If no package is agreed, Package 1 applies. The package cannot be changed once TPS has started work on the vacancy.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Package</th><th>Fee (plus VAT)</th><th>What is included</th></tr></thead>
+      <tbody>
+        <tr><td>Package 1 — Standard</td><td>12% of Remuneration</td><td>Advertising the role, online searches and matching from the TPS database. Rebate as in clause 8 (Package 1).</td></tr>
+        <tr><td>Package 2 — Plus</td><td>15% of Remuneration</td><td>Everything in Package 1, plus extra marketing. Guarantee as in clause 8 (Packages 2 and 3).</td></tr>
+        <tr><td>Package 3 — Senior or confidential</td><td>17% of Remuneration, plus a non-refundable £500 engagement fee paid before work starts</td><td>For senior or confidential roles that need headhunting. Guarantee as in clause 8 (Packages 2 and 3).</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>5.3 Remuneration means the basic annual salary. If service charge, tips or similar payments come to more than 20% of the basic salary, Remuneration means the whole package including those payments.</p>
+  <p>5.4 For hourly-paid roles, the annual figure is worked out as the hourly rate × 48 hours × 52 weeks.</p>
+  <p>5.5 A minimum fee of £3,000 plus VAT applies, including for part-time roles.</p>
   <p>5.6 If the Client does not tell TPS the true Remuneration, TPS may charge the fee on a reasonable estimate of the market rate for the role.</p>
 
   <h3>6. When the Introduction Fee is due</h3>
-  <p>6.1 TPS will send an invoice <span class="ph">[when the invoice is raised — to confirm]</span>.</p>
-  <p>6.2 The invoice must be paid within <span class="ph">[number — to confirm]</span> days of the invoice date.</p>
+  <p>6.1 TPS will send an invoice on the Candidate's start date. If the start date is more than 8 weeks after the offer is accepted, TPS will send the invoice when the offer is accepted instead.</p>
+  <p>6.2 The invoice must be paid within 14 days of the invoice date.</p>
   <p>6.3 The Client must tell TPS straight away when an offer is accepted, and confirm the start date and Remuneration in writing.</p>
 
   <h3>7. Introductions that lead to an Engagement later</h3>
-  <p>7.1 An Introduction Fee is due if the Client Engages a Candidate within <span class="ph">[number of months — to confirm]</span> months of the Introduction. This applies whether the Engagement is direct or through a third party.</p>
+  <p>7.1 An Introduction Fee is due if the Client Engages a Candidate within 12 months of the Introduction. This applies whether the Engagement is direct or through a third party.</p>
   <p>7.2 An Introduction Fee is also due if the Client passes a Candidate's details to another business, and that business Engages the Candidate within the same period. The Client is responsible for paying that fee.</p>
 
   <h3>8. Rebate or guarantee if a Candidate leaves</h3>
-  <p>8.1 If a Candidate leaves within <span class="ph">[guarantee period — to confirm]</span>, TPS will offer <span class="ph">[refund, free replacement, or both — to confirm]</span>.</p>
-  <p>8.2 The rebate or replacement only applies if all of the following are true:</p>
+  <p>8.1 If a Candidate leaves during the guarantee period, TPS will give a refund or a free replacement, depending on the package agreed under clause 5.2:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Week the Candidate leaves</th><th>Package 1</th><th>Packages 2 and 3</th></tr></thead>
+      <tbody>
+        <tr><td>Weeks 1–10</td><td>Refund of 100% in week 1, reducing by 10% each week to 10% in week 10</td><td>One free replacement</td></tr>
+        <tr><td>Weeks 11–12</td><td>No refund</td><td>One free replacement</td></tr>
+        <tr><td>Weeks 13–16</td><td>No refund</td><td>40% refund</td></tr>
+        <tr><td>Weeks 17–20</td><td>No refund</td><td>25% refund</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>8.2 Package 1 refunds for weeks 1–8 are paid into the Client's bank account within 14 days. Refunds for weeks 9–10 are given as a credit note against the Client's next invoice.</p>
+  <p>8.3 A free replacement is for the same job title, duties and location, and must be needed within 6 months of the original start date. If the Client would rather have a refund than a replacement, it must say so before TPS starts looking. The refund is then worked out on the Package 1 scale.</p>
+  <p>8.4 A week counts as complete once the Candidate has started it. Weeks run from Monday.</p>
+  <p>8.5 The rebate or replacement only applies if all of the following are true:</p>
   <ul>
     <li>the Introduction Fee was paid in full by the due date</li>
-    <li>the Client tells TPS in writing within <span class="ph">[number — to confirm]</span> days of the Candidate leaving</li>
+    <li>the Client tells TPS in writing within 7 days of the Candidate leaving</li>
     <li>the Candidate did not leave because of redundancy, a restructure, or a change to the role, pay or hours made by the Client</li>
     <li>the Client has not breached its employment duties to the Candidate. For example, the Client has not paid them late or below the agreed rate, made them work hours beyond their contract, or denied them breaks</li>
-    <li>the Candidate is not re-Engaged by the Client within <span class="ph">[number — to confirm]</span> months</li>
+    <li>the Candidate is not re-Engaged by the Client within 12 months</li>
   </ul>
-  <p>8.3 Rebates and replacements do not apply to fixed-term, seasonal or interim roles, unless agreed otherwise in writing.</p>
+  <p>8.6 Rebates and replacements do not apply to fixed-term, seasonal or interim roles, unless agreed otherwise in writing.</p>
 
   <h3>9. Withdrawn offers</h3>
-  <p>9.1 If the Client withdraws an offer after the Candidate has accepted it, <span class="ph">[cancellation fee — to confirm]</span> is payable.</p>
+  <p>9.1 If the Client withdraws an offer after the Candidate has accepted it, the full Introduction Fee is payable.</p>
   <p>9.2 If the Candidate withdraws before starting, no Introduction Fee is payable.</p>
 
   <h2>Part C — Temporary and contract workers</h2>
@@ -170,7 +197,7 @@
   <p>11.1 The Charges are <span class="ph">[how rates are set — to confirm]</span>.</p>
   <p>11.2 Higher rates apply for <span class="ph">[overtime, nights, weekends, bank holidays and the uplift — to confirm]</span>.</p>
   <p>11.3 The Client must sign or approve the Temporary Worker's timesheet each <span class="ph">[week or fortnight — to confirm]</span>. If the Client does not, TPS may invoice on the hours the Temporary Worker reports.</p>
-  <p>11.4 TPS will invoice <span class="ph">[weekly or fortnightly — to confirm]</span>. Invoices are payable within <span class="ph">[number — to confirm]</span> days.</p>
+  <p>11.4 TPS will invoice <span class="ph">[weekly or fortnightly — to confirm]</span>. Invoices are payable within 14 days.</p>
   <p>11.5 TPS may change the Charges if the Temporary Worker's pay must rise by law. Examples include increases to the National Minimum Wage, or equal treatment under clause 13. TPS will give the Client reasonable notice of any such change.</p>
 
   <h3>12. Client duties during an Assignment</h3>
@@ -242,9 +269,8 @@
     <li>a person not attending, not accepting a role, or leaving</li>
     <li>TPS being unable to introduce or supply anyone</li>
   </ul>
-  <p>19.3 TPS's total liability under these terms is limited to <span class="ph">[liability cap — to confirm]</span>.</p>
-  <p>19.4 Nothing in these terms limits liability for death or personal injury caused by negligence, for fraud, or for anything else that cannot be limited by law.</p>
-  <p>19.5 The Client will cover TPS for any loss TPS suffers because the Client breaches these terms or the law. This includes health and safety failures, discrimination, and breaches of the Agency Workers Regulations.</p>
+  <p>19.3 Nothing in these terms limits liability for death or personal injury caused by negligence, for fraud, or for anything else that cannot be limited by law.</p>
+  <p>19.4 The Client will cover TPS for any loss TPS suffers because the Client breaches these terms or the law. This includes health and safety failures, discrimination, and breaches of the Agency Workers Regulations.</p>
 
   <h3>20. Advertising</h3>
   <p>20.1 TPS may advertise the Client's vacancies on its website, on job boards and on social media without naming the Client. The exception is where the Client asks in writing for a role to be kept confidential.</p>
