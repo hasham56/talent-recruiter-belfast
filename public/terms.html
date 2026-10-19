@@ -38,8 +38,7 @@
   .sign th { width: 40%; font-weight: 600; color: var(--muted); }
   .table-scroll { overflow-x: auto; margin-bottom: 24px; }
   .table-scroll table { margin-bottom: 0; min-width: 520px; }
-  .sign { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  @media (max-width: 680px) { .sign { grid-template-columns: 1fr; } }
+  .sign { max-width: 520px; }
   footer { border-top: 1px solid var(--line); padding-block: 24px; color: var(--muted); font-size: 14px; text-align: center; }
 </style>
 </head>
@@ -286,26 +285,15 @@
 
   <h2>Signing</h2>
   <div class="sign">
-    <div>
-      <h3>On behalf of the Client</h3>
-      <table>
-        <tr><th>Name</th><td></td></tr>
-        <tr><th>Position</th><td></td></tr>
-        <tr><th>Company (legal name)</th><td></td></tr>
-        <tr><th>Company number</th><td></td></tr>
-        <tr><th>Signature</th><td></td></tr>
-        <tr><th>Date</th><td></td></tr>
-      </table>
-    </div>
-    <div>
-      <h3>On behalf of Talent Placement &amp; Support</h3>
-      <table>
-        <tr><th>Name</th><td>Jarred Morinte</td></tr>
-        <tr><th>Position</th><td>Executive Business Manager &amp; Contracts</td></tr>
-        <tr><th>Signature</th><td></td></tr>
-        <tr><th>Date</th><td></td></tr>
-      </table>
-    </div>
+    <h3>On behalf of the Client</h3>
+    <table>
+      <tr><th>Name</th><td></td></tr>
+      <tr><th>Position</th><td></td></tr>
+      <tr><th>Company (legal name)</th><td></td></tr>
+      <tr><th>Company number</th><td></td></tr>
+      <tr><th>Signature</th><td></td></tr>
+      <tr><th>Date</th><td></td></tr>
+    </table>
   </div>
 
   <p>Questions about these terms? <a href="/#contact">Get in touch</a>.</p>
