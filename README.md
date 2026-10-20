@@ -1,37 +1,15 @@
-# Talent Placement & Support – Client Terms of Business (DRAFT)
-
-> **Status: first draft – not ready to send to clients.**
-> Anything in **[square brackets with a Q number]** is a placeholder. The matching question is in `client-questions.md`. Once the answers are in, swap each placeholder for the answer.
-> These terms must be reviewed by a **Northern Ireland solicitor** before use.
-
----
-
-## Notes for whoever finishes this draft
-
-- **Written fresh, not copied.** This draft covers the same ground as a typical recruitment agency's client terms. The wording is original and written for Talent Placement & Support (TPS). It does not reuse HtE Recruitment's text.
-- **Northern Ireland law, not English law.** TPS is based in Belfast, so the terms are written for:
-  - the Employment (Miscellaneous Provisions) (Northern Ireland) Order 1981
-  - the Conduct of Employment Agencies and Employment Businesses Regulations (Northern Ireland) 2005, as amended in 2008 and 2010
-  - the Agency Workers Regulations (Northern Ireland) 2011, for temporary workers
-  - UK GDPR, the Data Protection Act 2018 and the Late Payment of Commercial Debts (Interest) Act 1998, which also apply in Northern Ireland
-- **Covers both services:** permanent placements (Part B) and temporary/contract workers (Part C).
-- **Temp-to-perm rules (clause 15) follow regulation 10 of the NI 2005 Regulations.** A transfer fee can only be charged if the worker is taken on within the later of:
-  - 14 weeks from their first day working for the client, or
-  - 8 weeks after their last day working for the client.
-
-  The client must also be offered an extended hire period instead of paying the fee. Ask the solicitor to check the current revised version of the Regulations.
-- **Late payment interest.** Some agency terms charge "8% per month". That is likely to be challenged as a penalty. This draft uses the statutory rate: 8% a year above the Bank of England base rate.
-
----
-
 # TERMS OF BUSINESS FOR CLIENTS
 
 **Talent Placement & Support**
-[Q1 – registered company name, e.g. "Talent Placement & Support Ltd"], a company registered in Northern Ireland under number [Q1 – company number], VAT number [Q1 – VAT number or "not VAT registered"].
-Registered office / trading address: The Mount Business Centre, 2 Woodstock Link, Belfast BT6 8DD, United Kingdom.
-Email: enquiries@talentplacementsupport.com · Web: www.talentplacementsupport.com
+Talent Placement & Support ("TPS") is a sole trader business based in Northern Ireland. TPS is not currently registered for VAT.
 
-Version [Q15 – version number], effective from [Q15 – date].
+Address: The Mount Business Centre, 2 Woodstock Link, Belfast BT6 8DD, United Kingdom.
+
+Email: enquiries@talentplacementsupport.com · info@talentplacementsupport.com
+
+Website: coming soon
+
+Version 1, October 2026.
 
 ---
 
@@ -65,9 +43,9 @@ Version [Q15 – version number], effective from [Q15 – date].
 - accepts the supply of a Temporary Worker
 - signs these terms
 
-3.2 These terms replace any terms the Client puts forward, including purchase order terms. The only exception is where a TPS director agrees otherwise in writing.
+3.2 These terms replace any terms the Client puts forward, including purchase order terms. The only exception is where an authorised representative of TPS agrees otherwise in writing.
 
-3.3 Any change to these terms must be agreed in writing and signed by a TPS director.
+3.3 Any change to these terms must be agreed in writing and signed by an authorised representative of TPS.
 
 ### 4. What the Client agrees to do
 4.1 Give TPS accurate details of each role before we start work. This includes:
@@ -80,7 +58,7 @@ Version [Q15 – version number], effective from [Q15 – date].
 
 4.2 Tell TPS in writing, before arranging an interview, if the role details change.
 
-4.3 Tell TPS in writing within **[Q10 – number] Working Days** of receiving a person's details if the Client already has that person's details from another source. If the Client does not, the Introduction is treated as made by TPS.
+4.3 Tell TPS in writing within 3 Working Days of receiving a person's details if the Client already has that person's details from another source. If the Client does not, the Introduction is treated as made by TPS.
 
 4.4 Give TPS feedback on CVs and interviews within a reasonable time, so Candidates are kept informed.
 
@@ -95,44 +73,61 @@ Version [Q15 – version number], effective from [Q15 – date].
 ### 5. Introduction Fee
 5.1 If the Client Engages a Candidate, the Client must pay TPS an Introduction Fee. The fee is due whether the role is the one first discussed or a different one.
 
-5.2 The Introduction Fee is **[Q2 – fee, e.g. "X% of Remuneration" / tiered packages]** plus VAT.
+5.2 The Introduction Fee depends on the package agreed before TPS starts work on the vacancy. If no package is agreed, Package 1 applies. The package cannot be changed once TPS has started work on the vacancy.
 
-5.3 Remuneration includes **[Q2 – what counts towards the fee, e.g. basic salary, guaranteed bonus, car allowance, service charge/tips]**.
+| Package | Fee | What is included |
+|---|---|---|
+| Package 1 – Standard | 12% of Remuneration | Advertising the role, online searches and matching from the TPS database. Rebate as in clause 8 (Package 1). |
+| Package 2 – Plus | 15% of Remuneration | Everything in Package 1, plus extra marketing. Guarantee as in clause 8 (Packages 2 and 3). |
+| Package 3 – Senior / confidential | 17% of Remuneration, plus a non-refundable £500 engagement fee paid before work starts | For senior or confidential roles that need headhunting. Guarantee as in clause 8 (Packages 2 and 3). |
 
-5.4 For hourly-paid roles, the annual figure is worked out as the hourly rate × **[Q2 – hours per week]** hours × 52 weeks.
+5.3 Remuneration means the basic annual salary. If service charge, tips or similar payments come to more than 20% of the basic salary, Remuneration means the whole package including those payments.
 
-5.5 A minimum fee of **[Q2 – minimum fee in £, or "no minimum fee"]** plus VAT applies.
+5.4 For hourly-paid roles, the annual figure is worked out as the hourly rate × 48 hours × 52 weeks.
+
+5.5 A minimum fee of £3,000 (plus VAT where applicable) applies, including for part-time roles.
 
 5.6 If the Client does not tell TPS the true Remuneration, TPS may charge the fee on a reasonable estimate of the market rate for the role.
 
 ### 6. When the Introduction Fee is due
-6.1 TPS will send an invoice **[Q4 – when the invoice is raised, e.g. "on the Candidate's start date" / "when the offer is accepted"]**.
+6.1 TPS will send an invoice on the Candidate's start date. If the start date is more than 8 weeks after the offer is accepted, TPS will send the invoice when the offer is accepted instead.
 
-6.2 The invoice must be paid within **[Q4 – number] days** of the invoice date.
+6.2 The invoice must be paid within 14 days of the invoice date.
 
 6.3 The Client must tell TPS straight away when an offer is accepted, and confirm the start date and Remuneration in writing.
 
 ### 7. Introductions that lead to an Engagement later
-7.1 An Introduction Fee is due if the Client Engages a Candidate within **[Q9 – number, e.g. 12] months** of the Introduction. This applies whether the Engagement is direct or through a third party.
+7.1 An Introduction Fee is due if the Client Engages a Candidate within 12 months of the Introduction. This applies whether the Engagement is direct or through a third party.
 
 7.2 An Introduction Fee is also due if the Client passes a Candidate's details to another business, and that business Engages the Candidate within the same period. The Client is responsible for paying that fee.
 
 ### 8. Rebate / guarantee if a Candidate leaves
-8.1 If a Candidate leaves within **[Q3 – guarantee period]**, TPS will offer **[Q3 – sliding-scale refund / free replacement / both]** as set out below:
+8.1 If a Candidate leaves during the guarantee period, TPS will give a refund or a free replacement, depending on the package agreed under clause 5.2:
 
-> **[Q3 – rebate table, e.g. week-by-week refund percentages, or replacement terms]**
+| Week the Candidate leaves | Package 1 | Packages 2 and 3 |
+|---|---|---|
+| Weeks 1–10 | Refund of 100% in week 1, reducing by 10% each week to 10% in week 10 | One free replacement |
+| Weeks 11–12 | No refund | One free replacement |
+| Weeks 13–16 | No refund | 40% refund |
+| Weeks 17–20 | No refund | 25% refund |
 
-8.2 The rebate or replacement only applies if all of the following are true:
+8.2 Package 1 refunds for weeks 1–8 are paid into the Client's bank account within 14 days. Refunds for weeks 9–10 are given as a credit note against the Client's next invoice.
+
+8.3 A free replacement is for the same job title, duties and location, and must be needed within 6 months of the original start date. If the Client would rather have a refund than a replacement, it must say so before TPS starts looking. The refund is then worked out on the Package 1 scale.
+
+8.4 A week counts as complete once the Candidate has started it. Weeks run from Monday.
+
+8.5 The rebate or replacement only applies if all of the following are true:
 - the Introduction Fee was paid in full by the due date
-- the Client tells TPS in writing within **[Q3 – number] days** of the Candidate leaving
+- the Client tells TPS in writing within 7 days of the Candidate leaving
 - the Candidate did not leave because of redundancy, a restructure, or a change to the role, pay or hours made by the Client
 - the Client has not breached its employment duties to the Candidate. For example, the Client has not paid them late or below the agreed rate, made them work hours beyond their contract, or denied them breaks
-- the Candidate is not re-Engaged by the Client within **[Q9 – number] months**
+- the Candidate is not re-Engaged by the Client within 12 months
 
-8.3 Rebates and replacements do not apply to fixed-term, seasonal or interim roles, unless agreed otherwise in writing.
+8.6 Rebates and replacements do not apply to fixed-term, seasonal or interim roles, unless agreed otherwise in writing.
 
 ### 9. Withdrawn offers
-9.1 If the Client withdraws an offer after the Candidate has accepted it, **[Q11 – full fee / cancellation fee of £X / percentage]** is payable.
+9.1 If the Client withdraws an offer after the Candidate has accepted it, the full Introduction Fee is payable.
 
 9.2 If the Candidate withdraws before starting, no Introduction Fee is payable.
 
@@ -151,13 +146,13 @@ Version [Q15 – version number], effective from [Q15 – date].
 10.3 The Temporary Worker is not the Client's employee. The Client must not change their pay, hours or duties directly. Any change goes through TPS.
 
 ### 11. Charges and timesheets
-11.1 The Charges are **[Q5 – how rates are set, e.g. "quoted per Assignment in the Assignment confirmation"]**.
+11.1 The Charges are the rates agreed between the Client and TPS for each type of worker, for example chefs, front of house staff, kitchen porters, housekeepers and care workers. TPS will confirm the agreed rates in writing before the Assignment starts.
 
-11.2 Higher rates apply for **[Q5 – overtime / nights / weekends / bank holidays and the uplift]**.
+11.2 Higher rates apply for overtime, night shifts and bank holidays. Higher weekend rates apply to health care workers only. The higher rates form part of the rates agreed under clause 11.1.
 
-11.3 The Client must sign or approve the Temporary Worker's timesheet each **[Q6 – week / fortnight]**. If the Client does not, TPS may invoice on the hours the Temporary Worker reports.
+11.3 The Client must sign or approve the Temporary Worker's timesheet each week or fortnight, as agreed. If the Client does not, TPS may invoice on the hours the Temporary Worker reports.
 
-11.4 TPS will invoice **[Q6 – weekly / fortnightly]**. Invoices are payable within **[Q4 – number] days**.
+11.4 TPS will invoice weekly or fortnightly, as agreed with the Client. Invoices are payable within 14 days.
 
 11.5 TPS may change the Charges if the Temporary Worker's pay must rise by law. Examples include increases to the National Minimum Wage or equal treatment under clause 13. TPS will give the Client reasonable notice of any such change.
 
@@ -180,11 +175,11 @@ The Client must:
 13.4 TPS may increase the Charges to reflect equal treatment under clause 13.2.
 
 ### 14. Unsuitable workers and ending an Assignment
-14.1 If the Client reasonably finds a Temporary Worker unsuitable, it should tell TPS in writing within **[Q8 – number] hours** of the start of the Assignment. In that case TPS will **[Q8 – e.g. "not charge for up to X hours worked" / "try to supply a replacement"]**.
+14.1 If the Client reasonably finds a Temporary Worker unsuitable, it must tell TPS in writing or by phone within 4 hours of the start of the Assignment, and give its reasons. TPS will then arrange a replacement Temporary Worker to cover the shift, subject to availability.
 
 14.2 If TPS receives information suggesting a Temporary Worker may be unsuitable, it will tell the Client and act as the 2005 Regulations require. This may include ending the supply.
 
-14.3 Either party may end an Assignment by giving **[Q8 – notice period, e.g. "one working day's"]** notice. TPS may end an Assignment at once if the Client breaches these terms or the Temporary Worker's safety is at risk.
+14.3 Either party may end an Assignment by giving 12 hours' notice. TPS may end an Assignment at once if the Client breaches these terms or the Temporary Worker's safety is at risk.
 
 ### 15. Taking on a Temporary Worker directly (temp-to-perm)
 15.1 A transfer fee is payable if, during the **Relevant Period**, the Client does any of the following with a Temporary Worker:
@@ -196,9 +191,9 @@ The Client must:
 - (a) 14 weeks after the first day the Temporary Worker worked for the Client in that Assignment. Any work before a break of more than 42 days is ignored.
 - (b) 8 weeks after the last day the Temporary Worker worked for the Client.
 
-15.3 The transfer fee is **[Q7 – fee, e.g. "X% of first-year Remuneration" / "a fixed £ amount" / "a sliding scale based on weeks worked"]** plus VAT.
+15.3 The transfer fee is 10% of the Temporary Worker's agreed first-year gross basic salary in the permanent role, plus VAT where applicable.
 
-15.4 **Extended hire option.** Instead of paying the transfer fee, the Client may tell TPS in writing that it wants an extended hire period of **[Q7 – number] weeks**. During that period TPS will supply the Temporary Worker on terms no less favourable than those that applied just before the notice. At the end of the extended hire period, the Client may take the Temporary Worker on without paying a transfer fee.
+15.4 **Extended hire option.** Instead of paying the transfer fee, the Client may tell TPS in writing that it wants an extended hire period of 4 weeks. During that period TPS will supply the Temporary Worker on terms no less favourable than those that applied just before the notice. At the end of the extended hire period, the Client may take the Temporary Worker on without paying a transfer fee.
 
 15.5 If TPS cannot supply the Temporary Worker for the whole extended hire period, the transfer fee is not payable. This does not apply if the failure was in no way TPS's fault.
 
@@ -209,9 +204,9 @@ The Client must:
 ## PART D – GENERAL TERMS
 
 ### 16. Payment, VAT and late payment
-16.1 All fees and Charges are subject to VAT at the current rate.
+16.1 TPS is not currently registered for VAT, so no VAT is charged at present. If TPS becomes registered for VAT, it will tell the Client in writing and add VAT at the current rate to invoices from its registration date.
 
-16.2 If an invoice is paid late, TPS may claim interest and fixed compensation under the Late Payment of Commercial Debts (Interest) Act 1998. Interest is charged at 8% a year above the Bank of England base rate. TPS may also claim reasonable recovery costs. **[Q4 – keep statutory rate, or set a different contractual rate? Confirm any admin fees.]**
+16.2 If an invoice is paid late, TPS may claim interest and fixed compensation under the Late Payment of Commercial Debts (Interest) Act 1998. Interest is charged at 8% a year above the Bank of England base rate. TPS may also claim reasonable recovery costs.
 
 16.3 The Client may not withhold or set off payment against any claim it has against TPS.
 
@@ -233,7 +228,7 @@ The Client must:
 
 18.3 The Client must not contact a person's current or past employers for a reference without that person's consent.
 
-18.4 TPS's privacy notice explains how TPS handles personal data: **[Q15 – link to privacy notice]**.
+18.4 TPS's privacy notice explains how TPS handles personal data. A copy is available from enquiries@talentplacementsupport.com and will be published on the TPS website when it launches.
 
 ### 19. Liability
 19.1 TPS takes reasonable care in finding and supplying suitable people. However, the Client is responsible for deciding whether a person is suitable to employ or use.
@@ -243,14 +238,12 @@ The Client must:
 - a person not attending, not accepting a role, or leaving
 - TPS being unable to introduce or supply anyone
 
-19.3 TPS's total liability under these terms is limited to **[Q14 – e.g. "the fees paid by the Client in the 12 months before the claim"]**.
+19.3 Nothing in these terms limits liability for death or personal injury caused by negligence, for fraud, or for anything else that cannot be limited by law.
 
-19.4 Nothing in these terms limits liability for death or personal injury caused by negligence, for fraud, or for anything else that cannot be limited by law.
-
-19.5 The Client will cover TPS for any loss TPS suffers because the Client breaches these terms or the law. This includes health and safety failures, discrimination, and breaches of the Agency Workers Regulations.
+19.4 The Client will cover TPS for any loss TPS suffers because the Client breaches these terms or the law. This includes health and safety failures, discrimination, and breaches of the Agency Workers Regulations.
 
 ### 20. Advertising
-20.1 TPS may advertise the Client's vacancies on its website, on job boards and on social media without naming the Client. The exception is where the Client asks in writing for a role to be kept confidential. **[Q12 – any roles/sectors TPS never advertises?]**
+20.1 TPS may advertise the Client's vacancies on its website, on job boards and on social media without naming the Client. The exception is where the Client asks in writing for a role to be kept confidential.
 
 ### 21. Other terms
 21.1 These terms, together with any Assignment confirmation, form the whole agreement between TPS and the Client about the services.
@@ -281,7 +274,8 @@ The Client must:
 
 | | |
 |---|---|
-| Name | [Q15 – e.g. Jarred Morinte] |
-| Position | [Q15 – e.g. Executive Business Manager & Contracts] |
+| Name | Jarred Morinte |
+| Position | Executive Business Manager & Contracts |
+| Business name | Talent Placement & Support (TPS), sole trader |
 | Signature | |
 | Date | |
